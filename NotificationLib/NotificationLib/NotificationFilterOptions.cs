@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace NotificationLib
+{
+    public enum SortNotificationBy { Date, Priority,Title}
+
+    public class NotificationFilterOptions
+    {
+        public bool? IsRead { get; set; }
+        public NotificationType[]? Types { get; set; } // список нужных типов
+        public string? SearchText { get; set; }
+        public int? MinPriority { get; set; }
+        public SortNotificationBy? SortBy { get; set; } // по Date, Priority, Title
+        public bool Descending { get; set; }
+    }
+
+}
